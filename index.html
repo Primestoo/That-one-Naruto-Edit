@@ -24,6 +24,18 @@
       border-radius: 8px;
     }
 
+    .header {
+      background-color: #FF5733;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
     .video-container {
       text-align: center;
       margin-bottom: 20px;
@@ -34,7 +46,7 @@
       height: auto;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
     }
   </style>
@@ -42,12 +54,17 @@
 <body>
   <audio id="bgMusic" src="Its Playtime.mp3" loop autoplay></audio>
   <div class="container">
-    <h1>That one Naruto Edit</h1>
-    <div class="video-container">
-      <video id="videoPlayer" width="640" height="360" controls>
-        <source src="New Project 41 [D2EAEB2].mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="header">
+      <h1>Naruto Edit Showcase</h1>
+    </div>
+    <div class="content">
+      <h2>Featured Edit: Don't Look Behind</h2>
+      <div class="video-container">
+        <video id="videoPlayer" width="640" height="360" controls>
+          <source src="ff9a55bfea8b90a0722299ebb01a07c2_001.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
   <script>
