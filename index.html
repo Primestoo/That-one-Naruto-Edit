@@ -54,6 +54,11 @@
     const bgMusic = document.getElementById('bgMusic');
     const videoPlayer = document.getElementById('videoPlayer');
 
+    // Play background music when the page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      bgMusic.play();
+    });
+
     videoPlayer.addEventListener('play', () => {
       bgMusic.pause();
     });
