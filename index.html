@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       background-color: #222222; /* Dark background color */
+      position: relative; /* Ensure proper positioning of the vertical line */
     }
 
     .container {
@@ -57,16 +58,25 @@
       border-top: 2px solid #ddd;
       margin: 20px 0;
     }
+
+    .vertical-line {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100vh; /* Adjust height as needed */
+      width: 1px; /* Width of the vertical line */
+      background-color: #ddd; /* Color of the vertical line */
+    }
   </style>
 </head>
 <body>
-  <audio id="bgMusic" src="MOVE YO BODY Official Video.mp3" loop autoplay></audio>
+  <audio id="bgMusic" src="Its Playtime.mp3" loop autoplay></audio>
   <div class="container">
     <div class="header">
       <h1>My Edits</h1>
     </div>
     <div class="content">
-      <h2>Don't Look Behind</h2>
+      <h2>Featured Edit: Don't Look Behind</h2>
       <div class="video-container">
         <video id="videoPlayer1" width="640" height="360" controls preload="auto" onplay="pauseBgMusic()">
           <source src="ff9a55bfea8b90a0722299ebb01a07c2_001.mp4" type="video/mp4">
@@ -74,7 +84,7 @@
         </video>
       </div>
       <hr>
-      <h2>That one Naruto Edit</h2>
+      <h2>Previous Edit: That one Naruto Edit</h2>
       <div class="video-container">
         <video id="videoPlayer2" width="640" height="360" controls preload="auto" onplay="pauseBgMusic()">
           <source src="New Project 41 [D2EAEB2].mp4" type="video/mp4">
@@ -83,6 +93,7 @@
       </div>
     </div>
   </div>
+  <div class="vertical-line"></div>
   <script>
     // Play background music
     document.getElementById('bgMusic').play();
