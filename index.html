@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: #222222; /* Dark background color */
     }
 
     .container {
@@ -22,7 +22,7 @@
     }
 
     .header {
-      background-color: #333333;
+      background-color: #333333; /* Darker header color */
       color: #fff;
       padding: 15px;
       border-radius: 8px 8px 0 0;
@@ -36,16 +36,20 @@
     .video-container {
       text-align: center;
       margin-bottom: 20px;
+      position: relative; /* Ensure proper positioning of the glow effect */
     }
 
     video {
       max-width: 100%;
       height: auto;
+      border: 2px solid #00f; /* Add blue border to the videos */
+      border-radius: 8px; /* Optional: Add rounded corners to the videos */
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Add blue box shadow for the glowing effect */
     }
 
     h1, h2 {
       text-align: center;
-      color: #333;
+      color: #fff;
     }
 
     hr {
@@ -56,10 +60,10 @@
   </style>
 </head>
 <body>
-  <audio id="bgMusic" src="Its Playtime.mp3" loop autoplay></audio>
+  <audio id="bgMusic" src="MOVE YO BODY Official Video.mp3" loop autoplay></audio>
   <div class="container">
     <div class="header">
-      <h1 style="color: #555;">My Edits</h1>
+      <h1>My Edits</h1>
     </div>
     <div class="content">
       <h2>Don't Look Behind</h2>
@@ -79,48 +83,5 @@
       </div>
     </div>
   </div>
-  <script>
-    const bgMusic = document.getElementById('bgMusic');
-    const videoPlayer1 = document.getElementById('videoPlayer1');
-    const videoPlayer2 = document.getElementById('videoPlayer2');
-
-    // Play background music when the page loads
-    window.addEventListener('DOMContentLoaded', () => {
-      bgMusic.play();
-    });
-
-    videoPlayer1.addEventListener('play', () => {
-      bgMusic.pause();
-    });
-
-    videoPlayer1.addEventListener('pause', () => {
-      bgMusic.play();
-    });
-
-    videoPlayer1.addEventListener('ended', () => {
-      bgMusic.play();
-    });
-
-    videoPlayer2.addEventListener('play', () => {
-      bgMusic.pause();
-    });
-
-    videoPlayer2.addEventListener('pause', () => {
-      bgMusic.play();
-    });
-
-    videoPlayer2.addEventListener('ended', () => {
-      bgMusic.play();
-    });
-
-    // Pause background music when the page is hidden (e.g., user switches to another tab)
-    document.addEventListener("visibilitychange", function() {
-      if (document.hidden) {
-        bgMusic.pause();
-      } else {
-        bgMusic.play();
-      }
-    });
-  </script>
 </body>
 </html>
