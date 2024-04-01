@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naruto Edit Showcase</title>
+  <title>My Edits</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       background-color: #f0f0f0;
     }
 
     .container {
       max-width: 800px;
+      margin: 20px auto;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -48,6 +45,13 @@
 
     h1, h2 {
       text-align: center;
+      color: #333;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #ddd;
+      margin: 20px 0;
     }
   </style>
 </head>
@@ -55,13 +59,19 @@
   <audio id="bgMusic" src="Its Playtime.mp3" loop autoplay></audio>
   <div class="container">
     <div class="header">
-      <h1>Naruto Edit Showcase</h1>
+      <h1>My Edits</h1>
     </div>
     <div class="content">
-      <h2>Featured Edit: Don't Look Behind</h2>
       <div class="video-container">
-        <video id="videoPlayer" width="640" height="360" controls>
+        <video id="videoPlayer1" width="640" height="360" controls>
           <source src="ff9a55bfea8b90a0722299ebb01a07c2_001.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <hr>
+      <div class="video-container">
+        <video id="videoPlayer2" width="640" height="360" controls>
+          <source src="New Project 41 [D2EAEB2].mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -69,22 +79,35 @@
   </div>
   <script>
     const bgMusic = document.getElementById('bgMusic');
-    const videoPlayer = document.getElementById('videoPlayer');
+    const videoPlayer1 = document.getElementById('videoPlayer1');
+    const videoPlayer2 = document.getElementById('videoPlayer2');
 
     // Play background music when the page loads
     window.addEventListener('DOMContentLoaded', () => {
       bgMusic.play();
     });
 
-    videoPlayer.addEventListener('play', () => {
+    videoPlayer1.addEventListener('play', () => {
       bgMusic.pause();
     });
 
-    videoPlayer.addEventListener('pause', () => {
+    videoPlayer1.addEventListener('pause', () => {
       bgMusic.play();
     });
 
-    videoPlayer.addEventListener('ended', () => {
+    videoPlayer1.addEventListener('ended', () => {
+      bgMusic.play();
+    });
+
+    videoPlayer2.addEventListener('play', () => {
+      bgMusic.pause();
+    });
+
+    videoPlayer2.addEventListener('pause', () => {
+      bgMusic.play();
+    });
+
+    videoPlayer2.addEventListener('ended', () => {
       bgMusic.play();
     });
 
