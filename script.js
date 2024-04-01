@@ -1,8 +1,10 @@
-// Play background music
-const bgMusic = document.getElementById('bgMusic');
-bgMusic.play();
+// Function to toggle modal visibility
+function toggleModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
 
-// Function to pause background music when any video is played
-function pauseBgMusic() {
-  bgMusic.pause();
+// Function to go back to the previous page
+function goBack() {
+  window.history.back();
 }
