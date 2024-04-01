@@ -4,101 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Edits</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #222222; /* Dark background color */
-      position: relative; /* Ensure proper positioning of the vertical line */
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .header {
-      background-color: #333333; /* Darker header color */
-      color: #fff;
-      padding: 15px;
-      border-radius: 8px 8px 0 0;
-      text-align: center;
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    .video-container {
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative; /* Ensure proper positioning of the glow effect */
-    }
-
-    video {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid #00f; /* Add blue border to the videos */
-      border-radius: 8px; /* Optional: Add rounded corners to the videos */
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Add blue box shadow for the glowing effect */
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #fff;
-    }
-
-    hr {
-      border: none;
-      border-top: 2px solid #ddd;
-      margin: 20px 0;
-    }
-
-    .vertical-line {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      height: calc(100% - 40px); /* Adjust height as needed */
-      width: 2px; /* Width of the vertical line */
-      background-color: #fff; /* Color of the vertical line */
-    }
-
-    /* New CSS for modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50%;
-      padding: 20px;
-      background-color: #808080; /* Dark gray background */
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    }
-
-    /* Button styles */
-    .btn {
-      background-color: #333333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    /* Blur effect for background */
-    .blurry-bg {
-      filter: blur(5px);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <audio id="bgMusic" src="Its Playtime.mp3" loop autoplay></audio>
@@ -122,35 +28,19 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <button class="btn" onclick="toggleModal()">Image Converter</button>
     </div>
   </div>
-  <div class="vertical-line"></div>
+  <div class="menu-icon">&#8801;</div>
 
   <!-- Modal -->
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <h2>Image Converter</h2>
+      <h2>Menu</h2>
       <!-- Add more content or options for image conversion here -->
-      <button class="btn" onclick="location.href='format.html'">Go to Format</button>
+      <button class="btn" onclick="location.href='format.html'">Image Converter</button>
     </div>
   </div>
 
-  <script>
-    // Play background music
-    const bgMusic = document.getElementById('bgMusic');
-    bgMusic.play();
-
-    // Function to pause background music when any video is played
-    function pauseBgMusic() {
-      bgMusic.pause();
-    }
-
-    // Function to toggle modal visibility
-    function toggleModal() {
-      var modal = document.getElementById('myModal');
-      modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
