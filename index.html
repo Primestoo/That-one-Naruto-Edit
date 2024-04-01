@@ -40,14 +40,31 @@
   </style>
 </head>
 <body>
+  <audio id="bgMusic" src="Its Playtime.mp3" loop></audio>
   <div class="container">
     <h1>That one Naruto Edit</h1>
     <div class="video-container">
-      <video width="640" height="360" controls>
-        <source src="New Project 41 [D2EAEB2].mp4" type="video/mp4">
+      <video id="videoPlayer" width="640" height="360" controls>
+        <source src="path_to_your_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    videoPlayer.addEventListener('play', () => {
+      bgMusic.pause();
+    });
+
+    videoPlayer.addEventListener('pause', () => {
+      bgMusic.play();
+    });
+
+    videoPlayer.addEventListener('ended', () => {
+      bgMusic.play();
+    });
+  </script>
 </body>
 </html>
