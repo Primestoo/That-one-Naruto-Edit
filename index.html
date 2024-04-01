@@ -61,10 +61,10 @@
 
     .vertical-line {
       position: absolute;
-      top: 0;
-      right: 0;
-      height: 100vh; /* Adjust height as needed */
-      width: 1px; /* Width of the vertical line */
+      top: 20px;
+      right: 20px;
+      height: calc(100% - 40px); /* Adjust height as needed */
+      width: 2px; /* Width of the vertical line */
       background-color: #fff; /* Color of the vertical line */
     }
 
@@ -138,11 +138,12 @@
 
   <script>
     // Play background music
-    document.getElementById('bgMusic').play();
-    
+    const bgMusic = document.getElementById('bgMusic');
+    bgMusic.play();
+
     // Function to pause background music when any video is played
     function pauseBgMusic() {
-      document.getElementById('bgMusic').pause();
+      bgMusic.pause();
     }
 
     // Function to toggle modal visibility
