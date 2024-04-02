@@ -1,3 +1,26 @@
+async function handleImageUpload(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = async function(e) {
+    const originalImage = document.getElementById('originalImage');
+    originalImage.src = e.target.result;
+
+    // Show the "Original Image" text
+    document.getElementById('originalImageText').style.display = 'block';
+
+    // Call the function to remove background and display processed image
+    const processedImageUrl = await removeBackground(e.target.result);
+
+    // Show the "Background Removed" text and processed image
+    document.getElementById('processedImageText').style.display = 'block';
+    document.getElementById('processedImage').src = processedImageUrl;
+    document.getElementById('processedImageContainer').style.display = 'block';
+  }
+
+  reader.readAsDataURL(file);
+}
+
 async function removeBackground(imageData) {
   const apiKey = "ErLEQU8CU7aXDX72dV7kH5JX";
   const formData = new FormData();
@@ -19,9 +42,8 @@ async function removeBackground(imageData) {
     const result = await response.blob();
     const processedImageUrl = URL.createObjectURL(result);
 
-    const processedImage = document.getElementById('processedImage');
-    processedImage.src = processedImageUrl;
+    return processedImageUrl;
   } catch (error) {
     console.error("Error:", error.message);
   }
-}
+      }
