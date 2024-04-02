@@ -16,7 +16,7 @@ async function handleImageUpload(event) {
     document.getElementById('processedImageText').style.display = 'block';
     document.getElementById('processedImage').src = processedImageUrl;
     document.getElementById('processedImageContainer').style.display = 'block';
-  }
+  };
 
   reader.readAsDataURL(file);
 }
