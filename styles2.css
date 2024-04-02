@@ -2,20 +2,21 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .upload-section {
@@ -23,21 +24,39 @@ h1 {
   margin-bottom: 20px;
 }
 
+.upload-label {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #0056b3;
+}
+
 .image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
-.image-preview h2 {
+.image-preview-inner {
+  flex-basis: 48%;
+  margin-bottom: 20px;
+}
+
+.image-text {
   text-align: center;
 }
 
-img {
+.preview-image {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-#processedImageContainer { /* Hide processed image by default */
-  display: none;
+  border-radius: 8px;
 }
