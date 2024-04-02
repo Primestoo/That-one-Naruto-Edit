@@ -12,38 +12,35 @@ body {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 h1 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.moots-gallery {
+#moots-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
 }
 
-.moot {
-  position: relative;
+.moot-item {
+  width: 30%; /* Adjust the width as needed */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.moot img {
-  width: 200px;
-  height: 200px;
-  border: 2px solid red;
-  border-radius: 50%;
+.moot-image {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.moot p {
-  margin-top: 5px;
-}
-
-.rip-offline {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+.rip-text {
   color: red;
+}
+
+.more-moots-text {
+  text-align: center;
+  margin-top: 20px;
+}
