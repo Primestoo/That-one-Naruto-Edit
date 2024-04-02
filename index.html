@@ -13,7 +13,7 @@
       <h1>My Edits</h1>
     </div>
     <div class="content">
-      <h2>Don't Look Behind</h2>
+      <h2>Look Behind</h2>
       <div class="video-container">
         <video id="videoPlayer1" width="640" height="360" controls preload="auto" onplay="pauseBgMusic()">
           <source src="ff9a55bfea8b90a0722299ebb01a07c2_001.mp4" type="video/mp4">
@@ -21,7 +21,7 @@
         </video>
       </div>
       <hr>
-      <h2>New Project 41 [D2EAEB2]</h2>
+      <h2>That one Naruto Edit</h2>
       <div class="video-container">
         <video id="videoPlayer2" width="640" height="360" controls preload="auto" onplay="pauseBgMusic()">
           <source src="New Project 41 [D2EAEB2].mp4" type="video/mp4">
@@ -33,14 +33,14 @@
   <div class="menu-icon" onclick="toggleModal()">&#8801;</div> <!-- Corrected line -->
   
   <!-- Modal -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <h2>Menu</h2>
-      <button class="btn" onclick="goBack()">Go Back</button> <!-- Go Back button -->
-      <!-- Add more content or options for the menu here -->
-      <button class="btn" onclick="location.href='format.html'">Image Converter</button> <!-- Image Converter button -->
-    </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <h2>Menu</h2>
+    <button class="btn" onclick="toggleModal()">Close Menu</button> <!-- Corrected button functionality -->
+    <!-- Add more content or options for the menu here -->
+    <button class="btn" onclick="location.href='format.html'">Image Converter</button> <!-- Image Converter button -->
   </div>
+    </div>
 
   <script src="script.js"></script>
 </body>
