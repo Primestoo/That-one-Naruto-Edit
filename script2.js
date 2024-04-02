@@ -1,38 +1,17 @@
-async function handleImageUpload(event) {
-  const file = event.target.files[0];
-  const reader = new FileReader();
-
-  reader.onload = async function(e) {
-    const originalImage = document.getElementById('originalImage');
-    originalImage.src = e.target.result;
-
-    // Show the "Original Image" text and image preview
-    document.getElementById('originalImageContainer').style.display = 'block';
-
-    // Call the function to remove background and display processed image
-    const processedImageUrl = await removeBackground(e.target.result);
-
-    // Show the "Background Removed" text and processed image
-    document.getElementById('processedImageText').style.display = 'block';
-    document.getElementById('processedImage').src = processedImageUrl;
-    document.getElementById('processedImageContainer').style.display = 'block';
-  }
-
-  reader.readAsDataURL(file);
-}
-
 async function removeBackground(imageData) {
   const apiKey = "ErLEQU8CU7aXDX72dV7kH5JX";
-  const formData = new FormData();
-  formData.append("image_file", imageData);
 
   try {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        "X-Api-Key": apiKey
+        "X-Api-Key": apiKey,
+        "Content-Type": "application/json"
       },
-      body: formData
+      body: JSON.stringify({
+        image_file_b64: imageData.split(',')[1], // Extract base64 data from data URL
+        size: "auto"
+      })
     });
 
     if (!response.ok) {
