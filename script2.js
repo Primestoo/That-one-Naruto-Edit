@@ -55,4 +55,4 @@ async function removeBackground(imageData) {
     console.error("Error removing background:", error.message);
     throw error;
   }
-        }
+      }
