@@ -1,29 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background Remover</title>
-  <link rel="stylesheet" href="styles2.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Background Remover</h1>
-    <div class="upload-section">
-      <input type="file" id="fileInput" accept="image/*" onchange="handleImageUpload(event)">
-    </div>
-    <div class="image-preview" id="imagePreviewContainer">
-      <div class="image-preview-inner" id="originalImageContainer">
-        <h2 class="image-text">Original Image</h2>
-        <img id="originalImage" class="preview-image" src="#" alt="Original Image">
-      </div>
-      <div class="image-preview-inner" id="processedImageContainer">
-        <h2 class="image-text">Background Removed</h2>
-        <img id="processedImage" class="preview-image" src="#" alt="Background Removed Image">
-      </div>
-    </div>
-  </div>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222222; /* Dark background color */
+  position: relative; /* Ensure proper positioning of the vertical line */
+}
 
-  <script src="script2.js"></script>
-</body>
-</html>
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.header {
+  background-color: #333333; /* Darker header color */
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.video-container {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; /* Ensure proper positioning of the glow effect */
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #00f; /* Add blue border to the videos */
+  border-radius: 8px; /* Optional: Add rounded corners to the videos */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Add blue box shadow for the glowing effect */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #fff;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: calc(100% - 40px); /* Adjust height as needed */
+  width: 2px; /* Width of the vertical line */
+  background-color: #fff; /* Color of the vertical line */
+}
+
+/* New CSS for modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 20px;
+  background-color: #808080; /* Dark gray background */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Button styles */
+.btn {
+  background-color: #333333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Blur effect for background */
+.blurry-bg {
+  filter: blur(5px);
+}
+
+/* ≡ symbol */
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  }
