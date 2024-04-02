@@ -36,4 +36,8 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
-  }
+}
+
+#processedImageContainer { /* Hide processed image by default */
+  display: none;
+}
