@@ -29,7 +29,7 @@ async function handleImageUpload(event) {
 }
 
 async function removeBackground(imageData) {
-  const apiKey = "ErLEQU8CU7aXDX72dV7kH5JX";
+  const apiKey = "G2A5Aa5YvNJXydx6pi3Xb5FH";
   const formData = new FormData();
   formData.append("image_file", imageData);
 
